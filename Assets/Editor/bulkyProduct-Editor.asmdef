@@ -1,0 +1,10 @@
+{
+  "name": "bulkyProduct-Editor",
+  "references": [
+    "bulkyProduct"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}
