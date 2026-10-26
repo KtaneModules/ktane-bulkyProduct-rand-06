@@ -30,8 +30,8 @@ public class bulkyProductScript : MonoBehaviour
 
 	void generate()
 	{
-		top = Enumerable.Range(0, 32).Select(_=>Rnd.Range(0,16)).ToList();
-		middle = Enumerable.Range(0, 32).Select(_=>Rnd.Range(0,16)).ToList();
+		top = Enumerable.Range(0, 32).Select(_=>_==31?Rnd.Range(1,16):Rnd.Range(0,16)).ToList();
+		middle = Enumerable.Range(0, 32).Select(_=>_==31?Rnd.Range(1,16):Rnd.Range(0,16)).ToList();
 		
 		topText.text = top.AsEnumerable().Reverse().Select((c, i) =>
 		{
@@ -72,6 +72,8 @@ public class bulkyProductScript : MonoBehaviour
 			answer[i] %= 16;
 			answer[i + 1] += t;
 		}
+
+		answer = answer.AsEnumerable().Reverse().SkipWhile(x => x == 0).Reverse().ToList();
 		expectedAnswer = toString(answer);
 		log($"Top number: {toString(top)}\nMiddle number: {toString(middle)}\nExpected answer: {toString(answer)}");
 	}

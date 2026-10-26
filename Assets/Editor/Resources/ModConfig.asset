@@ -16,7 +16,7 @@ MonoBehaviour:
   author: rand06
   description: 'Bring your beefy calculators, because this is Bulky Product! The idea
     is very simple: just multiply 2 numbers, that''s all!'
-  version: 
+  version: v1
   outputFolder: build
   debugBuild: 1
   previewImage: {fileID: 2800000, guid: 8537823f150f3884490ad4df7fed55d3, type: 3}
